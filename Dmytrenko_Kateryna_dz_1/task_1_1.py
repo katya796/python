@@ -8,6 +8,6 @@ def convert_time(duration: int) -> str:
     if duration >= 86400:
         print(str(duration // 86400) + " дн " + str(duration % 86400 // 3600) + " час " + str(duration % 86400 % 3600 // 60) + " мин " + str(duration % 86400 % 3600 % 60) + " сек")
 
-duration = 400153
+duration = 251000
 result = convert_time(duration)
 print(result)
