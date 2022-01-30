@@ -1,10 +1,14 @@
 from random import uniform
-
+import math
 
 def transfer_list_in_str(list_in: list) -> str:
+    new_list = []
     for element in list_in:
-        print(f'{int(element)} руб {str(element-int(element))[2:]} коп')
-    str_out = "здесь итоговая строка"
+        if math.floor(element*100)%100 < 10:
+            new_list.append(f'{int(element)} руб 0{(math.floor(element*100)%100)} коп')
+        else:
+            new_list.append(f'{int(element)} руб {(math.floor(element * 100) % 100)} коп')
+    str_out = new_list
     return str_out
 
 
