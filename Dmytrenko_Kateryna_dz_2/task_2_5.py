@@ -19,21 +19,19 @@ print(result_1)
 
 
 def sort_prices(list_in: list) -> list:
-    """Сортирует вещественные числа по возрастанию, не создавая нового списка"""
-    # пишите реализацию здесь
-    return ["отсортированный результирующий список"]
+    list_in.sort()
+    return list_in
 
 
-# зафиксируйте здесь информацию по исходному списку my_list
+print(id(my_list), my_list)
 result_2 = sort_prices(my_list)
-# зафиксируйте здесь доказательство, что результат result_2 остался тем же объектом
+print(id(result_2), result_2)
 print(result_2)
 
 
 def sort_price_adv(list_in: list) -> list:
-    """Создаёт новый список и возвращает список с элементами по убыванию"""
-    # пишите реализацию здесь
-    list_out = ["список элементов в списке по убыванию"]
+    year_sorted = sorted(list_in, reverse=True)
+    list_out = year_sorted
     return list_out
 
 
@@ -42,10 +40,8 @@ print(result_3)
 
 
 def check_five_max_elements(list_in: list) -> list:
-    """Проверяет элементы входного списка вещественных чисел и возвращает
-        список из ПЯТИ максимальных значений"""
-    # пишите реализацию здесь
-    list_out = ["список из пяти самых больших элементов"]
+    year_sorted = sorted(sorted(list_in, reverse=True)[:5:],reverse=False)
+    list_out = year_sorted
     return list_out
 
 
