@@ -11,3 +11,4 @@ def thesaurus(*args) -> dict:
 print(thesaurus("Иван", "Мария", "Петр", "Илья"))
 
 
+
